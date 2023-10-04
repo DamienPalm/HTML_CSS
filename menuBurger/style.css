@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    background-color: blanchedalmond;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.circle-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 1rem;
+}
+
+.circle {
+    background-color: azure;
+    width: 4rem;
+    /* Définissez la largeur */
+    height: 4rem;
+    /* Définissez la hauteur */
+    border-radius: 50%;
+    /* Arrondir les coins pour créer une forme de cercle */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* .menu-toggle {
+    display: none;
+} */
+
+.container:nth-child(2) {
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.menu-toggle:checked+.container:nth-child(2) {
+    transform: translateX(0);
+}
